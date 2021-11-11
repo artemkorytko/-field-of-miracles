@@ -1,18 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ChancePanel : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public void UpdateChanceText()
     {
-        
+        var gameController = GameManager.Instance.GetGameController();
+        GetComponent<TextMeshProUGUI>().text = $"Chance: {gameController.ChanceCount}";
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -5,18 +5,23 @@ public class GameController : IGameController
 {
     private int openLettersCount;
     private char[] wordChars;
-    private char[] openChars;
     private List<char> inputLetters;
+    private int changeCount;
 
-    public bool IsCompleted => openLettersCount == wordChars.Length;
+    public bool IsCompleted => openLettersCount == wordChars.Length -1;
+
+    public bool IsFall => changeCount == 0;
 
     public char[] ShowenWord => wordChars;
+
+    public int ChanceCount => changeCount;
 
     public void Init(string word)
     {
         wordChars = word.ToCharArray();
         inputLetters = new List<char>();
         openLettersCount = 0;
+        changeCount = 10;
     }
 
     public bool CheckInputLetter(char letter)
@@ -33,9 +38,12 @@ public class GameController : IGameController
             if(wordChars[i] == letter)
             {
                 openLettersCount++;
-                openChars[i] = letter;
                 isLetterExist = true;
             }
+        }
+        if(!isLetterExist)
+        {
+            changeCount--;
         }
 
         return isLetterExist ? true : false;

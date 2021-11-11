@@ -116,7 +116,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baa1a4053f4def9498399f123ccbd190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  game: {fileID: 0}
 --- !u!114 &7356682460421105566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,13 +547,17 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4797768861674486568, guid: bff3dad7a0dae7143a3c99b9b165ed3e, type: 3}
+      propertyPath: letterPrefab
+      value: 
+      objectReference: {fileID: 4906230436004849783, guid: cf401b6d541093749881b01a73034e37, type: 3}
     - target: {fileID: 4857843290088669371, guid: bff3dad7a0dae7143a3c99b9b165ed3e, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5295239554042997846, guid: bff3dad7a0dae7143a3c99b9b165ed3e, type: 3}
       propertyPath: m_fontSize
-      value: 18
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 5558403647779289250, guid: bff3dad7a0dae7143a3c99b9b165ed3e, type: 3}
       propertyPath: m_AnchorMax.y

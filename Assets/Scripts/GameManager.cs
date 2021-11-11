@@ -101,4 +101,9 @@ public class GameManager : MonoBehaviour
         GameState = state;
     }
 
+    public IGameController GetGameController()
+    {
+        return gameController;
+    }
+
 }

@@ -7,5 +7,8 @@ public interface IGameController
     void Init(string word);
     bool CheckInputLetter(char letter);
     bool IsCompleted { get; }
+    bool IsFall { get; }
     char[] ShowenWord { get; }
+
+    int ChanceCount { get; }
 }

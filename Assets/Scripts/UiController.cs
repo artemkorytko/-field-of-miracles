@@ -33,7 +33,6 @@ public class UiController : MonoBehaviour
         currentPanel?.Close();
         gamePanel.Open();
         currentPanel = gamePanel;
-        gamePanel.Setup(GameManager.Instance.gameController.ShowenWord);
     }
 
     public void OnWinState()
